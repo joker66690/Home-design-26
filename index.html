@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Design 26</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header, footer { background-color: #f8f8f8; padding: 20px; text-align: center; }
+        nav { margin: 20px; }
+        .language-toggle { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Home Design 26</h1>
+        <div class="language-toggle">
+            <button onclick="toggleLanguage()">Toggle Language</button>
+        </div>
+    </header>
+
+    <nav>
+        <h2>קטגוריות</h2>
+        <ul>
+            <li><a href="#beds">מיטות</a></li>
+            <li><a href="#living-room">סלון</a></li>
+            <li><a href="#dining-room">פינת אוכל</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="beds">
+            <h2>מיטות</h2>
+            <p>בחר מהמגוון הרחב של מיטות.</p>
+        </section>
+
+        <section id="living-room">
+            <h2>סלון</h2>
+            <p>עצב את הסלון שלך עם הרהיטים שלנו.</p>
+        </section>
+
+        <section id="dining-room">
+            <h2>פינת אוכל</h2>
+            <p>גלו את פינות האוכל שלנו.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Home Design 26</p>
+    </footer>
+
+    <script>
+        let currentLanguage = 'he';
+        function toggleLanguage() {
+            if (currentLanguage === 'he') {
+                document.documentElement.lang = 'en';
+                document.querySelector('header h1').innerText = 'Home Design 26';
+                document.querySelector('nav h2').innerText = 'Categories';
+                document.querySelector('section#beds h2').innerText = 'Beds';
+                document.querySelector('section#living-room h2').innerText = 'Living Room';
+                document.querySelector('section#dining-room h2').innerText = 'Dining Room';
+                document.querySelector('section#beds p').innerText = 'Choose from a wide range of beds.';
+                document.querySelector('section#living-room p').innerText = 'Furnish your living room with our furniture.';
+                document.querySelector('section#dining-room p').innerText = 'Discover our dining rooms.';
+                currentLanguage = 'en';
+            } else {
+                document.documentElement.lang = 'he';
+                document.querySelector('header h1').innerText = 'Home Design 26';
+                document.querySelector('nav h2').innerText = 'קטגוריות';
+                document.querySelector('section#beds h2').innerText = 'מיטות';
+                document.querySelector('section#living-room h2').innerText = 'סלון';
+                document.querySelector('section#dining-room h2').innerText = 'פינת אוכל';
+                document.querySelector('section#beds p').innerText = 'בחר מהמגוון הרחב של מיטות.';
+                document.querySelector('section#living-room p').innerText = 'עצב את הסלון שלך עם הרהיטים שלנו.';
+                document.querySelector('section#dining-room p').innerText = 'גלו את פינות האוכל שלנו.';
+                currentLanguage = 'he';
+            }
+        }
+    </script>
+</body>
+</html>
